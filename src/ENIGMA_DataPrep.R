@@ -21,7 +21,7 @@ europeanCountries$area_sqkm <- as.numeric(st_area(europeanCountries)) / 1000000
 ### READ IN newest OIE DATA ###
 ##link to where files are - the below code will pick the newest file in the folder
 tt <- tempfile()
-download.file("http://www.costmodds.org/ENIGMA2023/for_ai.car", tt, mode="wb")
+download.file("http://www.enigmahpai.org/ENIGMA2023/for_ai.car", tt, mode="wb")
 qs::qload(tt)
 updateDate <-strftime(as.Date(substring(filename, 7,14), format='%Y%m%d'),format = '%d/%m/%Y')
 file.remove(tt)
